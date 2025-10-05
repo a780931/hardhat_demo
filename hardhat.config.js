@@ -1,5 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("@openzeppelin/hardhat-upgrades");
+require("solidity-coverage");
+require("@nomicfoundation/hardhat-chai-matchers"); 
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -17,5 +19,9 @@ module.exports = {
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY || ""
+  },
+  coverage: {
+    enabled: true,
+    runs: 200
   }
 };
